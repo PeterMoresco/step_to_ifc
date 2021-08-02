@@ -1,2 +1,47 @@
-# step_to_ifc
-A simple project based on FreeCAD to convert STEP assemblies to IFC.
+# **step_to_ifc**
+
+Since I didn't find a way to export an STEP assembly with multiple levels to IFC, I'm exploring how to do it using FreeCAD.
+The plan is to produce these things:
+
+- A python script that communicates with FreeCAD and imports the STEP and exports the IFC(this is mostly done)
+- An electron UI to set the detail of the process and set the IFC properties(yet started)
+
+# How it works
+
+It's a python script that imports the model into FreeCAD and creates one IFC entity for every component or sub-assembly in the STEP file.
+
+# How to use
+
+1. First one should install the latest [FreeCAD](https://www.freecadweb.org/)
+
+2. Open FreeCAD and go to Part workbench
+
+![alt text](change_workbench.png)
+
+3. Go to preferences
+
+![alt text](change_preference.png)
+
+4. In the option Import/Export, go to STEP and chage the mode to "assembly per document". This will set FreeCAD to import the STEP files using their original tree structure
+
+![alt text](change_step_preference.png)
+
+5. Now find the path to the python.exe inside the FreeCAD/bin folder
+
+![alt text](freecad_python_path.png)
+
+6. Run the script using the FreeCAD's python, then use the STEP assembly filename and the output IFC filename as arguments
+
+```bash
+> D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "<file_path.stp>" "<file_path.ifc>"
+```
+
+7. That's it! For now! 
+
+Notes: 
+
+- I'm using [IFC++](https://ifcquery.com/) to visualize and debug the models
+- I'm using [FreeCAD](https://www.freecadweb.org/) v0.19 for better IFC support
+- Be aware that I'm not a programmer, I'm an engineer with a lot of curiosity and some programming knowledge. Feel free to comment and sugest stuff
+
+Contact: pedro.moresco93@outlook.com

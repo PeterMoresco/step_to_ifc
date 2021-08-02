@@ -14,46 +14,12 @@ pieces.
 
 **Use the ifc++ to visualize the ifc models and tree info**
 
-`
-# To get the children of the obj
-obj.OutList
-# To check the item type
-# 'App::Part' assembly
-# 'Part::Feature' part
-obj.TypeId
-# Create a ifc container
-obj1 = Arch.makeBuildingPart()
-# Set a placement of a object based on anothers
-obj.Placement = obj1.Placement.copy()
-# Sets the label(the name on the tree)
-obj1.Label = "NewName"
-# Create a new BIM component
-obj = Arch.makeComponent(FreeCAD.ActiveDocument.<Name of the document>)
-# Import object
-import ImportGui
-ImportGui.insert(u"<path_to_file>", "TreeName")
-# This will happen once one enable the multipart STEP import
-App.getDocument("<TreeName>").saveAs("<path_to_file.FCStd">)
-# Exporting to IFC
-__objs__ = []
-__objs__.append(FreeCAD.ActiveDocument.getObject("<container_tree_name>"))
-import exportIFC
-exportIFC.export(__objs__, u"<path_to_ifc.ifc>")
-# Open new document
-App.newDocument("<name>")
-# Change the IFC type
-FreeCAD.ActiveDocument.getObject("<object_name>") = u"<ifc_type>"
-`
+By this moment, the best option is to use the python installatio present in the FreeCAD\bin.
+In this way, all the modules are loaded. The UI has to be loaded to, in order to properly load all the methods.
 
-# Finding the container with most child
+Next steps:
 
-`
-# Get all the container objects in the tree
-containers = list(filter(lambda x: x.TypeId == 'App::Part', FreeCAD.ActiveDocument.Objects))
-# Gets the children count
-childrenCount = [len(x.OutListRecursive) for x in containers]
-# Sort them
-sortedList = [x for _, x in sorted(zip(childrenCount, containers), key=lambda duo: duo[0])]
-# The main container
-mainContainer = sortedList[-1]
-`
+- [ ] Make the freecad_step_to_ifc.py a cmd utilitie
+- [ ] Add some loggin to the script
+- [ ] Make the UI in electron
+- [ ] Read the structure tree from FreeCAD and edit the IFC properties

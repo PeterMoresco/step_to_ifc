@@ -1,0 +1,8 @@
+# Python related stuff
+__pycache__/
+
+# Ignoring third party stuff
+ifc++/
+
+# Ignoring test files
+test_models/
