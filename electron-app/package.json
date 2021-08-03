@@ -1,0 +1,11 @@
+{
+  "name": "step-to-ifc",
+  "version": "1.0.0",
+  "description": "The UI for the step-to-ifc script",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PeterMoresco",
+  "license": "MIT"
+}

@@ -1,1 +1,1 @@
-D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "C:\Users\pedro\Documents\step_to_ifc\test_models\rm6067_300_2_slide_base_r3_asm.stp" "C:\Users\pedro\Documents\step_to_ifc\test_models\rm6067_300_2_slide_base_r3_asm.ifc"
+D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "C:\Users\pedro\Documents\step_to_ifc\test_models\MONTAGEM ELV04 TPR00333-COMPLETA.stp" "C:\Users\pedro\Documents\step_to_ifc\test_models\MONTAGEM ELV04 TPR00333-COMPLETA.ifc"

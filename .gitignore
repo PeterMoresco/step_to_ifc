@@ -6,3 +6,6 @@ ifc++/
 
 # Ignoring test files
 test_models/
+
+# Node modules
+electron-app/node_modules

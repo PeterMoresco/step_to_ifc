@@ -4,7 +4,7 @@ Since I didn't find a way to export an STEP assembly with multiple levels to IFC
 The plan is to produce these things:
 
 - A python script that communicates with FreeCAD and imports the STEP and exports the IFC(this is mostly done)
-- An electron UI to set the detail of the process and set the IFC properties(yet started)
+- An electron UI to set the detail of the process and set the IFC properties(in development)
 
 # How it works
 
@@ -16,27 +16,29 @@ It's a python script that imports the model into FreeCAD and creates one IFC ent
 
 2. Open FreeCAD and go to Part workbench
 
-![alt text](change_workbench.png)
+![alt text](img/change_workbench.png)
 
 3. Go to preferences
 
-![alt text](change_preference.png)
+![alt text](img/change_preference.png)
 
 4. In the option Import/Export, go to STEP and chage the mode to "assembly per document". This will set FreeCAD to import the STEP files using their original tree structure
 
-![alt text](change_step_preference.png)
+![alt text](img/change_step_preference.png)
 
-5. Now find the path to the python.exe inside the FreeCAD/bin folder
+3. While in the Preferences, go to IFC export and uncheck the option to use the IfcOpenShell serializer
 
-![alt text](freecad_python_path.png)
+![alt text](img/uncheck_ifcopenshell.png)
 
-6. Run the script using the FreeCAD's python, then use the STEP assembly filename and the output IFC filename as arguments
+6. Now find the path to the python.exe inside the FreeCAD/bin folder
+
+![alt text](img/freecad_python_path.png)
+
+7. Run the script using the FreeCAD's python, then use the STEP assembly filename and the output IFC filename as arguments
 
 ```bash
 > D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "<file_path.stp>" "<file_path.ifc>"
 ```
-
-7. That's it! For now! 
 
 Notes: 
 
