@@ -9,3 +9,6 @@ test_models/
 
 # Node modules
 electron-app/node_modules
+
+# Commit notes
+commit

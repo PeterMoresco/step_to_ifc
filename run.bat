@@ -1,1 +1,1 @@
-D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "C:\Users\pedro\Documents\step_to_ifc\test_models\MONTAGEM ELV04 TPR00333-COMPLETA.stp" "C:\Users\pedro\Documents\step_to_ifc\test_models\MONTAGEM ELV04 TPR00333-COMPLETA.ifc"
+D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "C:\Users\pedro\Documents\step_to_ifc\test_models\PE COM DUPLA ALIMENT 50GR ASCENDENTE EL2-370 ESTIC610.stp" "C:\Users\pedro\Documents\step_to_ifc\test_models\PE COM DUPLA ALIMENT 50GR ASCENDENTE EL2-370 ESTIC610.ifc"
