@@ -9,6 +9,7 @@ The plan is to produce these things:
 # How it works
 
 It's a python script that imports the model into FreeCAD and creates one IFC entity for every component or sub-assembly in the STEP file.
+Please note that not all options in the import STEP/export IFC works well with each other. For this purpose everytime you use the script it generates a log file with all the details about the options for the process. One can use them to verify the options that optimize the performance of the process. Further investigation about this topic is intended in the future. For more information about these options, please refer to the FreeCAD [docs](https://wiki.freecadweb.org/Import_Export_Preferences).
 
 # How to use
 

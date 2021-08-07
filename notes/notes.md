@@ -19,6 +19,8 @@ The use of the IfcOpenShell is unadvised because it showed difficulties exportin
 By this moment, the best option is to use the python installation present in the FreeCAD\bin.
 In this way, all the modules are loaded. The UI has to be loaded to, in order to properly load all the methods.
 
+Since the start I realized that the options in the import STEP/export IFC have to be tweaked to work together. So to provide a little more of information about them I implemented log files for the exports, so one can keep track of time, hardware, etc. I help that in the future this help to facilitate the debug process in case something goes wrong.
+
 # Logging details of the conversion
 
 ## Logging

@@ -1,1 +1,1 @@
-D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "C:\Users\pedro\Documents\step_to_ifc\test_models\PE COM DUPLA ALIMENT 50GR ASCENDENTE EL2-370 ESTIC610.stp" "C:\Users\pedro\Documents\step_to_ifc\test_models\PE COM DUPLA ALIMENT 50GR ASCENDENTE EL2-370 ESTIC610.ifc"
+D:\FreeCAD\bin\python.exe freecad_step_to_ifc.py "C:\Users\pedro\Documents\step_to_ifc\test_models\TCE-42 CALHA PADRAO 3M V2019 ESTRUTURA MONTADA-214.stp" "C:\Users\pedro\Documents\step_to_ifc\test_models\TCE-42 CALHA PADRAO 3M V2019 ESTRUTURA MONTADA-214.ifc"
