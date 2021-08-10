@@ -158,14 +158,16 @@ def totalRAM():
     '''
     This function calculates the total amount of RAM, 
     using only standard librabries. It's not pretty.
+    Since in some systems the amount of RAM is divided,
+    this function now includes a loop to sum it.
     '''
     process = os.popen('wmic memorychip get capacity')
     result = process.read()
     process.close()
     try:
-        totalMem = float(result.replace(
-            '\n', '').strip().split(' ')[-1])/1024**3
-        return totalMem
+        temp = result.replace('\n', '').split(' ')
+        totalMem = list(filter(lambda x: x.isdigit(), temp))
+        return sum(map(lambda x: int(x), totalMem))/1024**3
     except:
         return 'NA'
 
@@ -183,7 +185,7 @@ def getNode(_root, nodeName):
 
 def getIFCExportPreferences():
     '''
-    Retrieves the export IFC preferences from FreeCAD.
+    Retrieves the IFC export and STEP import preferences from FreeCAD.
     Since the approach used by exportIFC.py I could not make
     to work, I found a workaround based on the post
     https://forum.freecadweb.org/viewtopic.php?t=37524
@@ -289,7 +291,7 @@ def getIFCExportPreferences():
 def main():
     '''
     This function wraps the argparser and 
-    initiate the logging
+    initiates the logging
     '''
     # Create the parser
     my_parser = argparse.ArgumentParser(
